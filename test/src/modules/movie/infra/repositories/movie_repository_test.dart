@@ -16,6 +16,8 @@ void main() {
     final result = await repository.getMovies();
 
     expect(result.whenSuccess((success) => List<Movie>), List<Movie>);
+    expect(result.whenSuccess((success) => success[0].title),
+        "Capitão América: O Primeiro Vingador");
   });
 }
 
