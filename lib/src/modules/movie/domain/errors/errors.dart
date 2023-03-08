@@ -8,3 +8,7 @@ abstract class IMoviesException {
 class MoviesException extends IMoviesException {
   const MoviesException(super.message, [super.stackTrace]);
 }
+
+class DatasourceMovieException extends IMoviesException {
+  DatasourceMovieException(super.message, [super.stackTrace]);
+}

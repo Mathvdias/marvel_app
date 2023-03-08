@@ -6,7 +6,7 @@ import 'package:marvel_app/src/modules/movie/infra/datasources/movie_datasource.
 import 'package:multiple_result/multiple_result.dart';
 
 class MovieRepository extends IMovieRepository {
-  final MovieDatasource movieDatasource;
+  final IMovieDatasource movieDatasource;
 
   MovieRepository(this.movieDatasource);
   @override

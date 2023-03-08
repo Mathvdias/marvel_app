@@ -6,10 +6,10 @@ import 'package:marvel_app/src/modules/movie/infra/datasources/movie_datasource.
 import 'package:marvel_app/src/modules/movie/infra/repositories/movie_repository.dart';
 import 'package:mocktail/mocktail.dart';
 
-class MovieDataSourceMock extends Mock implements MovieDatasource {}
+class MovieDataSourceMock extends Mock implements IMovieDatasource {}
 
 void main() {
-  final MovieDatasource movieDatasource = MovieDataSourceMock();
+  final IMovieDatasource movieDatasource = MovieDataSourceMock();
   final repository = MovieRepository(movieDatasource);
   test('deve retornar uma lista de filmes', () async {
     when(() => movieDatasource.getMovies()).thenAnswer((_) async => moviesJson);

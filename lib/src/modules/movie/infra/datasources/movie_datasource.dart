@@ -1,3 +1,3 @@
-abstract class MovieDatasource {
+abstract class IMovieDatasource {
   Future<List> getMovies();
 }
