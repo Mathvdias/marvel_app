@@ -14,7 +14,6 @@ class GetMovies implements IGetMovies {
   GetMovies(this.repository);
   @override
   Future<Result<List<Movie>, IMoviesException>> call() async {
-    
     return await repository.getMovies();
   }
 }
