@@ -6,7 +6,7 @@ class Movie {
   final String date;
   final String language;
   final String poster;
-  final int popularity;
+  final double popularity;
   final double vote;
   final int voteCount;
 
