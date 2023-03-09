@@ -1,16 +1,25 @@
 # marvel_app
+- Flutter 3.7.6 stable
+- Akshar Font
 
-A new Flutter project.
+## Design
+<div>
+<img align="center" src="https://user-images.githubusercontent.com/74201503/224106429-3ceab06b-7c76-4615-af7a-5f932fe75499.png" width="185" height="400"/>
+<img align="center" src="https://user-images.githubusercontent.com/74201503/224106469-3f89ca2d-2763-4a84-873c-015af61b36ac.png" width="185" height="400"/>
+</div>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Specs
+- Clean Arch
+- SOLID
+- BloC
+- Modular
+- Unit Tests
+## Packages
+  - cupertino_icons: ^1.0.2
+  - multiple_result: ^4.0.0
+  - flutter_modular: ^5.0.3
+  - equatable: ^2.0.5
+  - bloc: ^8.1.1
+  - flutter_bloc: ^8.1.2
+  - flutter_svg: ^2.0.2
+  - intl: ^0.18.0
