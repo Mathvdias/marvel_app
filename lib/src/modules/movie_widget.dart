@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Akshar',
         useMaterial3: true,
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.red,
       ),
     );
   }

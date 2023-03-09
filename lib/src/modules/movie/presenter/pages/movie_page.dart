@@ -58,6 +58,8 @@ class MovieList extends StatelessWidget {
                   onTap: () =>
                       Modular.to.pushNamed('/details', arguments: movie),
                   leading: CircleAvatar(
+                    foregroundColor: Colors.red[900],
+                    backgroundColor: Colors.red[50],
                     child: Text(movie.title[0]),
                   ),
                   title: Text(
