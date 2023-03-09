@@ -4,7 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:marvel_app/src/modules/movie/presenter/blocs/movie_cubit.dart';
 
-import 'package:intl/intl.dart';
+import 'package:marvel_app/src/modules/movie/presenter/utils/format_date.dart';
 
 class MoviePage extends StatelessWidget {
   const MoviePage({super.key});
@@ -26,11 +26,6 @@ class MoviePage extends StatelessWidget {
     );
   }
 }
-
-// Text(
-//               'Movies Marvel',
-//               style: Theme.of(context).textTheme.headlineLarge,
-//             )
 
 class MovieList extends StatelessWidget {
   const MovieList({super.key});
@@ -72,7 +67,6 @@ class MovieList extends StatelessWidget {
                   subtitle: Text(
                     movie.date.getFormattedDate(),
                   ),
-                  horizontalTitleGap: 30,
                   trailing: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -89,16 +83,5 @@ class MovieList extends StatelessWidget {
         return child;
       },
     );
-  }
-}
-
-extension MattExtension on String {
-  String getFormattedDate() {
-    var localDate = DateTime.parse(this).toLocal();
-    var inputFormat = DateFormat('yyyy-MM-dd HH:mm');
-    var inputDate = inputFormat.parse(localDate.toString());
-    var outputFormat = DateFormat('dd/MM/yyyy');
-    var outputDate = outputFormat.format(inputDate);
-    return outputDate.toString();
   }
 }
