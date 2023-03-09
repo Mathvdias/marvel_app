@@ -11,7 +11,11 @@ class MoviePage extends StatelessWidget {
     return BlocProvider(
       create: (context) => Modular.get<MovieCubit>()..fetchMovies(),
       child: Scaffold(
-        appBar: AppBar(title: const Text('Movies Marvel')),
+        appBar: AppBar(
+            title: Text(
+          'Movies Marvel',
+          style: Theme.of(context).textTheme.headlineLarge,
+        )),
         body: const MovieList(),
       ),
     );
