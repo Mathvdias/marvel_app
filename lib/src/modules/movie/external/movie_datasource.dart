@@ -8,6 +8,7 @@ import '../infra/datasources/movie_datasource.dart';
 class MovieDatasource implements IMovieDatasource {
   @override
   Future<List> getMovies() async {
+    //Future.delayed(const Duration(seconds: 2));
     try {
       final String response = await rootBundle.loadString('assets/mock.json');
       final data = await jsonDecode(response);
