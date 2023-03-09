@@ -11,8 +11,6 @@ class MovieCubit extends Cubit<MovieState> implements Disposable {
   final IGetMovies getMovies;
   MovieCubit(this.getMovies) : super(MovieInitial());
 
-  // void emit(MovieState newState) => value = newState;
-
   Future<void> fetchMovies() async {
     emit(MovieLoading());
     final result = await getMovies.call();
