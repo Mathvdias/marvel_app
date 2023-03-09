@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
       title: 'Marvel Movies',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Akshar',
         useMaterial3: true,
