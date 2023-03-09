@@ -7,6 +7,7 @@ import 'package:marvel_app/src/modules/movie/presenter/pages/movie_page.dart';
 import 'movie/infra/datasources/movie_datasource.dart';
 import 'movie/infra/repositories/movie_repository.dart';
 import 'movie/presenter/blocs/movie_cubit.dart';
+import 'movie/presenter/pages/movie_details.dart';
 
 class MovieModule extends Module {
   @override
@@ -22,6 +23,16 @@ class MovieModule extends Module {
       ];
 
   @override
-  List<ModularRoute> get routes =>
-      [ChildRoute('/', child: (ctx, args) => const MoviePage())];
+  List<ModularRoute> get routes => [
+        ChildRoute(
+          '/',
+          child: (ctx, args) => const MoviePage(),
+          transition: TransitionType.rightToLeft,
+        ),
+        ChildRoute(
+          '/details',
+          child: (context, args) => MovieDetails(movie: args.data),
+          transition: TransitionType.rightToLeft,
+        ),
+      ];
 }
