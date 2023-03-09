@@ -5,6 +5,7 @@ import 'package:marvel_app/src/modules/movie/external/movie_datasource.dart';
 
 import 'movie/infra/datasources/movie_datasource.dart';
 import 'movie/infra/repositories/movie_repository.dart';
+import 'movie/presenter/blocs/movie_cubit.dart';
 
 class MovieModule extends Module {
   @override
@@ -15,5 +16,7 @@ class MovieModule extends Module {
         Bind.factory<IMovieRepository>((i) => MovieRepository(i())),
         //usecase
         Bind.factory((i) => GetMovies(i())),
+        //bloc
+        Bind.singleton((i) => MovieCubit(i()))
       ];
 }

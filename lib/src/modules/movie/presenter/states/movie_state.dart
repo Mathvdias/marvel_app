@@ -8,3 +8,17 @@ abstract class MovieState extends Equatable {
 }
 
 class MovieInitial extends MovieState {}
+
+class MovieLoading extends MovieState {}
+
+class MovieSuccess extends MovieState {
+  final List<Movie> movies;
+
+  const MovieSuccess(this.movies);
+}
+
+class MovieFailure extends MovieState {
+  final String message;
+
+  const MovieFailure(this.message);
+}
